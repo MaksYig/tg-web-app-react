@@ -12,11 +12,12 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
+import {useTelegram} from '../../Hooks/useTelegram';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
+  const {user}=useTelegram();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -124,7 +125,9 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-
+           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+             <h3>{user?.username}</h3>
+          </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
