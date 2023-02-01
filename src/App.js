@@ -7,11 +7,13 @@ import './App.css';
 
 
 function App() {
-  const {onToggleButton}=useTelegram();
+  const {user,onToggleButton}=useTelegram();
+  
   return (
     <div className="App">
       <NavBar/>
       <Btn onClick={onToggleButton}/> 
+      <div>{user}</div>
     </div>
   );
 }
