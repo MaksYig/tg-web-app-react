@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 
-const Button_btn = (props)=> {
+const Btn = (props)=> {
     return (
-      <Button {...props} variant="contained"/>
+      <Button {...props} />
     )
 }
 
-export default Button_btn;
+export default Btn;
 
 
