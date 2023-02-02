@@ -12,7 +12,7 @@ import TimePicker from '../TimePicker/TimePicker'
 export default function Form() {
 
   const [step, setStep] = React.useState(0);
-  const[ data, setData]=React.useState([]);
+
 
   const NextHandler =()=>{
     if (step >= 0 && step < 3){
