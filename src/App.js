@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route index element={<Form/>}/> 
+        {/* <Route index element={<Form/>}/>  */}
         <Route path={'form'} element={<Form/>}/>
 
       </Routes>
