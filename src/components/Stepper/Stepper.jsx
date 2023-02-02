@@ -10,10 +10,10 @@ const steps = [
   'Выберите время',
 ];
 
-export default function StepperC() {
+export default function StepperC({step,...props}) {
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={1} alternativeLabel>
+      <Stepper activeStep={step} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
